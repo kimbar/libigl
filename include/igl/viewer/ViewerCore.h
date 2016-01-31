@@ -8,6 +8,10 @@
 #ifndef IGL_VIEWER_VIEWER_CORE_H
 #define IGL_VIEWER_VIEWER_CORE_H
 
+#ifndef IGL_VIEWER_WITH_NANOGUI
+#define IGL_VIEWER_WITH_NANOGUI
+#endif
+
 #ifdef IGL_VIEWER_WITH_NANOGUI
 #include <igl/viewer/TextRenderer.h>
 #endif
