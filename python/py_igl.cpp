@@ -48,6 +48,7 @@
 #include <igl/cut_mesh_from_singularities.h>
 #include <igl/comb_frame_field.h>
 #include <igl/n_polyvector.h>
+#include <igl/copyleft/boolean/mesh_boolean.h>
 
 
 void python_export_igl(py::module &m)
@@ -98,5 +99,6 @@ void python_export_igl(py::module &m)
 #include "py_igl/py_cut_mesh_from_singularities.cpp"
 #include "py_igl/py_comb_frame_field.cpp"
 #include "py_igl/py_n_polyvector.cpp"
+#include "py_igl/py_boolean.cpp"
 
 }
