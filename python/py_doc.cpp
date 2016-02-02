@@ -407,3 +407,4 @@ const char *__doc_igl_viewer_ViewerData = R"igl_Qu8mg5v7(See igl\viewer\ViewerDa
 const char *__doc_igl_viewer_ViewerPlugin = R"igl_Qu8mg5v7(See igl\viewer\ViewerPlugin.h for the documentation.)igl_Qu8mg5v7";
 const char *__doc_igl_xml_ReAntTweakBarXMLSerialization = R"igl_Qu8mg5v7(See igl\xml\ReAntTweakBarXMLSerialization.h for the documentation.)igl_Qu8mg5v7";
 const char *__doc_igl_xml_serialize_xml = R"igl_Qu8mg5v7(See igl\xml\serialize_xml.h for the documentation.)igl_Qu8mg5v7";
+const char *__doc_igl_boolean = R"igl_Qu8mg5v7(See somewhere for the documentation.)igl_Qu8mg5v7";

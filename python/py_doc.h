@@ -407,3 +407,4 @@ extern const char *__doc_igl_viewer_ViewerData;
 extern const char *__doc_igl_viewer_ViewerPlugin;
 extern const char *__doc_igl_xml_ReAntTweakBarXMLSerialization;
 extern const char *__doc_igl_xml_serialize_xml;
+extern const char *__doc_igl_boolean;
