@@ -63,6 +63,10 @@ IGL_INLINE bool igl::copyleft::boolean::mesh_boolean(
   tictoc();
 #endif
 
+#ifdef MESH_BOOLEAN_TIMING
+  log_time("start");
+#endif
+
   typedef typename DerivedVC::Scalar Scalar;
   //typedef typename DerivedFC::Scalar Index;
   typedef CGAL::Epeck Kernel;
@@ -85,7 +89,10 @@ IGL_INLINE bool igl::copyleft::boolean::mesh_boolean(
       DerivedFC FF(FA.rows() + FB.rows(), 3);
       VV << VA, VB;
       FF << FA, FB.array() + VA.rows();
-      resolve_fun(VV, FF, V, F, CJ);
+//
+//		FIXME: Temporary fix no self intersection resolution
+//
+//      resolve_fun(VV, FF, V, F, CJ);
   }
 #ifdef MESH_BOOLEAN_TIMING
   log_time("resolve_self_intersection");
@@ -315,9 +322,18 @@ IGL_INLINE bool igl::copyleft::boolean::mesh_boolean(
       MatrixXES Vr;
       DerivedFC Fr;
       Eigen::MatrixXi IF;
+
+	  //
+	  // FIXME: Here where it flops!!!
+	  //
       igl::copyleft::cgal::remesh_self_intersections(
           V, F, params, Vr, Fr, IF, J, I);
+	  //
+	  // FIXME: Here where it flops!!!
+	  //
+
       assert(I.size() == Vr.rows());
+
 
       // Merge coinciding vertices into non-manifold vertices.
       std::for_each(Fr.data(), Fr.data()+Fr.size(),

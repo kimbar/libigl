@@ -10,6 +10,8 @@
 #ifndef IGL_COPYLEFT_BOOLEAN_MESH_BOOLEAN_H
 #define IGL_COPYLEFT_BOOLEAN_MESH_BOOLEAN_H
 
+#define MESH_BOOLEAN_TIMING
+
 #include "../../igl_inline.h"
 #include "MeshBooleanType.h"
 #include <Eigen/Core>
